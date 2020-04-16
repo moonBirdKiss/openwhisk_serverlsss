@@ -1,0 +1,7 @@
+{
+  "_id": "_design/profile",
+  "filters": {
+    "unverified-emails": "function (doc) {\n  if (doc.email.status == 'unverified') {\n    return true\n  }\n  return false\n}"
+  },
+  "language": "javascript"
+}
